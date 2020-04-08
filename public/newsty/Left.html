@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)http://www.168023.com:8080/Left.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+
+</title><link href="./layout.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        body {background-image: url(/images/sideBg.gif); background-repeat:repeat-y;}
+    </style>
+    <script type="text/javascript">
+        function ShowHide(obj) {
+            var oStyle = obj.style;
+            var imgId = obj.id.replace("M","S");
+            oStyle.display == "none" ? oStyle.display = "block" : oStyle.display = "none";
+            oStyle.display == "none" ? document.getElementById(imgId).src = "/images/arrBig1.gif" : document.getElementById(imgId).src = "images/arrBig.gif";
+        }
+        
+        function GetUrl(obj,url) {
+            //加入一个随机防止OPEN的缓存
+            vNum = Math.random()
+            vNum = Math.round(vNum * 1000)
+            if (url.valueOf("?") > 0) {
+                url = url + "&" + vNum;
+            }
+            else {
+                url = url + "?" + vNum;            
+            }
+            window.open(url,"frm_main_content");
+            var trList = document.getElementsByTagName("tr");
+            for(var i=0;i<trList.length;i++)
+            {
+                if(trList[i].className=="linkBg")
+                {
+                    trList[i].className = "s";
+                }
+            }            
+            obj.className="linkBg";
+        }
+    </script>
+</head>
+<body>
+    
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody>
+                <tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_1);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_1"> 游戏用户
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_1" style="display: none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody>
+                                    	<tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsList.aspx&#39;)">
+				                        <td width="313" height="25" align="right1"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">用户管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsGoldList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">游戏币管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsCurrencyList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">游戏豆管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsConvertPresentList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">魅力兑换记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/RecordConvertMedalList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">元宝兑换记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsGrantTreasureList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">赠送游戏币记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/RecordUseProp.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">道具购买记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsInsureList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">保险柜记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/ConfineContentList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">限制字符</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/ConfineAddressList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">限制IP地址</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/ConfineMachineList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">限制机器码</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AccountManager/AccountsLossReportList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">申诉管理</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_2);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_2"> 充值系统
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_2" style="display:none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/LivcardBuildStreamList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">实卡管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/ShareInfoList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">充值记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/OnLineOrderList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">订单管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/OrderKQList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">快钱管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/OrderYPList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">易宝管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/OrderVBList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">声讯记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/OrderAppList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">苹果管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/MemberTypeList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">会员类型管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/FilledManager/BuyMember.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">购买会员记录</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_3);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_3"> 系统维护
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_3" style="display:none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/DataBaseInfoList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">机器管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/GameGameItemList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">游戏管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/SystemMessageList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">系统消息</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/SystemSet.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">系统设置</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/SigninConfig.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">签到设置</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/LevelConfig.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">等级配置</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/SpreadSet.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">推广管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/GlobalPlayPresentList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">泡点设置</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/AppManager/GamePropertyManager.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">道具管理</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_7);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_7"> 商城系统
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_7" style="display:none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/MallManager/MallTypeList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">类型管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/MallManager/MallInfoList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">商品管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/MallManager/MallOrderList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">订单管理</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_9);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_9"> 任务系统
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_9" style="display:none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/TaskManager/TaskList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">任务管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/TaskManager/TaskRecordList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">任务记录</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_10);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_10"> 比赛系统
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_10" style="display: none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/MatchManager/MatchConfigList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">比赛配置</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/MatchManager/MatchRank.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">比赛排名</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_4);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_4"> 网站系统
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_4" style="display: none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/NewsList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">新闻管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/RulesList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">规则管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/SinglePageList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">独立页管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/IssueList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">问题管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/FeedbackList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">反馈管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/LogoSet.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">站点配置</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/AdsWebHomeList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">首页广告管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/AdsGameList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">大厅广告管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/WebManager/ActivityList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">活动管理</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_8);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_8"> 数据分析
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_8" style="display: none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/PayStatGraph.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">充值统计</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/UserRegStat.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">注册统计</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/StatOnline.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">在线统计</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/UserPlaying.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">在房间玩家</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/GoldDistribution.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">金币分布</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/UserLossStat.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">流失玩家</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/UserActiveStat.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">活跃玩家</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/SystemStat.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">系统统计</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/GameRecord.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">游戏记录</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/BankTaxStat.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">银行税收</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/GameTaxStat.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">游戏税收</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/DataAnalysis/ClearTableData.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">清理表数据</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+            <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tbody><tr>
+		            <td class="hui f14 bold pd32 hand" height="30" onclick="JavaScript:ShowHide(M_5);">
+		                <img src="./arrBig1.gif" width="11" height="11" id="S_5"> 后台系统
+		            </td>
+	            </tr>
+                <tr>
+                    <td id="M_5" style="display: none;">
+                        <table width="93%" border="0" align="right" cellpadding="0" cellspacing="0" class="hui">
+                            
+                                    <tbody><tr class="s" onclick="GetUrl(this,&#39;/Module/BackManager/BaseRoleList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">管理员管理</td>
+			                        </tr>
+                                
+                                    <tr class="s" onclick="GetUrl(this,&#39;/Module/OperationLog/SystemSecurityList.aspx&#39;)">
+				                        <td width="313" height="25" align="right"></td>
+				                        <td width="67" height="25"><img src="./arrSmall.gif" width="8" height="7"></td>
+				                        <td width="725" height="25" align="left">安全日志</td>
+			                        </tr>
+                                
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        
+
+
+</body></html>

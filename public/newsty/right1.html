@@ -1,0 +1,1657 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+
+</title><link href="../../styles/layout.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+
+    <script type="text/javascript" src="../../scripts/comm.js"></script>
+
+    <script type="text/javascript" src="../../scripts/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript">
+        function GrantManager(opType) {
+            if (deleteop()) {
+                var cid = "";
+                var cids = GelTags("input");
+
+                for (var i = 0; i < cids.length; i++) {
+                    if (cids[i].checked) {
+                        if (cids[i].name == "cid")
+                            cid += cids[i].value + ",";
+                    }
+                }
+
+                if (cid == "") {
+                    showError("未选中任何数据");
+                    return;
+                }
+
+                //操作处理
+                cid = cid.substring(0, cid.length - 1);
+                switch (opType) {
+                    case "GrantMember":
+                        openWindowOwn('GrantMember.aspx?param=' + cid, '_GrantMember', 600, 240);
+                        break;
+                    case "GrantTreasure":
+                        openWindowOwn('GrantTreasure.aspx?param=' + cid, '_GrantTreasure', 600, 240);
+                        break;
+                    case "GrantExperience":
+                        openWindowOwn('GrantExperience.aspx?param=' + cid, '_GrantExperience', 600, 240);
+                        break;
+                    case "GrantScore":
+                        openWindowOwn('GrantScore.aspx?param=' + cid, '_GrantScore', 600, 240);
+                        break;
+                    case "GrantClearScore":
+                        openWindowOwn('GrantClearScore.aspx?param=' + cid, '_GrantClearScore', 600, 240);
+                        break;
+                    case "GrantFlee":
+                        openWindowOwn('GrantFlee.aspx?param=' + cid, '_GrantFlee', 600, 240);
+                        break;
+                }
+            }
+        }
+        function ShowDiv() {
+            document.getElementById('divQuery').style.display = "block";
+        }
+        function HideDiv() {
+            document.getElementById('divQuery').style.display = "none";
+        }
+    </script>
+
+    <style type="text/css">
+        .querybox
+        {
+            width: 500px;
+            background: #caebfc;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: left;
+            border-left: 1px solid #066ba4;
+            border-right: 1px solid #066ba4;
+            border-bottom: 1px solid #066ba4;
+            border-top:1px solid #066ba4;
+            z-index: 999;
+            display: none;
+            position: absolute;
+            top: 150px;
+            left: 200px; /*filter:progid:DXImageTransform.Microsoft.DropShadow(color=#9a8559,offX=1,offY=1,positives=true); */
+        }
+    </style>
+</head>
+<body>
+    <form name="form1" method="post" action="AccountsList.aspx?71" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script language="Javascript"><!--
+function ANP_checkInput(bid,mv){var el=document.getElementById(bid);var r=new RegExp("^\\s*(\\d+)\\s*$");
+if(r.test(el.value)){if(RegExp.$1<1||RegExp.$1>mv){alert("页索引超出范围！");el.focus();el.select();return false;}
+return true;}alert("页索引不是有效的数值！");el.focus();el.select();return false;}
+function ANP_keydown(e,btnId){
+var kcode;
+if(window.event){kcode=e.keyCode;}
+else if(e.which){kcode=e.which;}
+var validKey=(kcode==8||kcode==46||kcode==37||kcode==39||(kcode>=48&&kcode<=57)||(kcode>=96&&kcode<=105));
+if(!validKey){
+if(kcode==13) document.getElementById(btnId).click();
+if(e.preventDefault) e.preventDefault();else{event.returnValue=false};
+}
+}
+--></script>
+<div>
+
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWJgLcqYOtBwKZ7YzdCgLNrc/PCwLvjry/BQLAn+vmDALB6bCfDwK707L1AQL7ofLJCAL2voeFDgLMyf2uBwKY2ZylBALg2ZN+AsKGtEYCma3ukwkC9bXOjA0CrMy32gICz4XE4A8CpszvxAwC1fSLuAICkc7dzg8Cjs7dzg8Cj87dzg8CjM7dzg8Cjc7dzg8Ckc7hpwwCjs7hpwwCj87hpwwCjM7hpwwCjc7hpwwCxqamoA4Cw5bDqgsCtduR0QkC2fH+jAsCmfTD7QgCnti36gsC5siHuw8CqqTf2QYCmfSH7AiDrVg9YHHJp0e8MQGpNV64xfdsUt0LHTDG67BQs5LtAw==" />
+</div>
+    <!-- 头部菜单 Start -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
+        <tr>
+            <td width="19" height="25" valign="top" class="Lpd10">
+                <div class="arr">
+                </div>
+            </td>
+            <td width="1232" height="25" valign="top" align="left">
+                你当前位置：用户系统 - 用户管理
+            </td>
+        </tr>
+    </table>
+    <!-- 头部菜单 End -->
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="titleQueBg">
+        <tr>
+            <td align="center"  style="width: 80px">
+                普通查询：
+            </td>
+            <td>
+                <input name="txtSearch" type="text" id="txtSearch" title="输入帐号、昵称、用户标识或游戏ID" class="text" />
+                <input id="ckbIsLike" type="checkbox" name="ckbIsLike" /><label for="ckbIsLike">模糊查询</label>
+                <input type="submit" name="btnQuery" value="查询" id="btnQuery" class="btn wd1" />
+                <input type="button" value="高级查询" class="btn wd2" onclick="ShowDiv()" />
+                <input type="submit" name="btnRefresh" value="刷新" id="btnRefresh" class="btn wd1" />
+            </td>
+        </tr>
+    </table>
+    <div id="divQuery" class="querybox">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="listBg2">
+            <tr>
+                <td height="40" colspan="2" class="f14 bold Lpd10 Rpd10">
+                    <div class="hg3  pd7">
+                        基本查询</div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" style="width:20%; height:30px;">
+                    用户状态：
+                </td>
+                <td align="left">
+                    <input id="ckbProtect" type="checkbox" name="ckbProtect" /><label for="ckbProtect">申请密保</label>
+                    <input id="ckbMember" type="checkbox" name="ckbMember" /><label for="ckbMember">会员</label>
+                    <input id="ckbNullity" type="checkbox" name="ckbNullity" /><label for="ckbNullity">冻结</label>
+                    <input id="ckbIsAndroid" type="checkbox" name="ckbIsAndroid" /><label for="ckbIsAndroid">机器人</label>
+                    <input id="ckbIsUser" type="checkbox" name="ckbIsUser" /><label for="ckbIsUser">真实玩家</label>
+                    <input id="ckbIsManager" type="checkbox" name="ckbIsManager" /><label for="ckbIsManager">管理员</label>
+                </td>
+            </tr>
+            <tr>
+                <td height="35" colspan="2" class="f14 bold Lpd10 Rpd10">
+                    <div class="hg3  pd7">
+                        时间查询</div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" style="width:20%;height:35px;">
+                    注册日期：
+                </td>
+                <td align="left">
+                    <input name="txtStartDate" type="text" id="txtStartDate" class="text wd2" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;,maxDate:&#39;#F{$dp.$D(\&#39;txtEndDate\&#39;)}&#39;})" /><img
+                        src="../../Images/btn_calendar.gif" onclick="WdatePicker({el:'txtStartDate',dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'txtEndDate\')}'})"
+                        style="cursor: pointer; vertical-align: middle" />
+                    至
+                    <input name="txtEndDate" type="text" id="txtEndDate" class="text wd2" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;,minDate:&#39;#F{$dp.$D(\&#39;txtStartDate\&#39;)}&#39;})" /><img
+                        src="../../Images/btn_calendar.gif" onclick="WdatePicker({el:'txtEndDate',dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'txtStartDate\')}'})"
+                        style="cursor: pointer; vertical-align: middle" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right" style="width:20%;height:30px;">
+                    登录日期：
+                </td>
+                <td  align="left">
+                    <input name="txtLoStartDate" type="text" id="txtLoStartDate" class="text wd2" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;,maxDate:&#39;#F{$dp.$D(\&#39;txtLoEndDate\&#39;)}&#39;})" /><img
+                        src="../../Images/btn_calendar.gif" onclick="WdatePicker({el:'txtLoStartDate',dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'txtLoEndDate\')}'})"
+                        style="cursor: pointer; vertical-align: middle" />
+                    至
+                    <input name="txtLoEndDate" type="text" id="txtLoEndDate" class="text wd2" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd&#39;,minDate:&#39;#F{$dp.$D(\&#39;txtLoStartDate\&#39;)}&#39;})" /><img
+                        src="../../Images/btn_calendar.gif" onclick="WdatePicker({el:'txtLoEndDate',dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'txtLoStartDate\')}'})"
+                        style="cursor: pointer; vertical-align: middle" />
+                </td>
+            </tr>
+            <tr>
+                <td height="35" colspan="2" class="f14 bold Lpd10 Rpd10">
+                    <div class="hg3  pd7">
+                        IP查询</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="height:35px;">
+                    注册地址：<input name="txtRegIP" type="text" maxlength="15" id="txtRegIP" class="text wd3" />
+                    注册机器：<input name="txtRegMachine" type="text" id="txtRegMachine" class="text" style="width: 195px; margin: 1px 2px 0 0;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="height:30px;">
+                    登录地址：<input name="txtLogIP" type="text" maxlength="15" id="txtLogIP" class="text wd3" />
+                    登录机器：<input name="txtLogMachine" type="text" id="txtLogMachine" class="text" style="width: 195px; margin: 1px 2px 0 0;" />
+                </td>
+            </tr>
+            <tr style="display: none;">
+                <td height="35" colspan="2" class="f14 bold Lpd10 Rpd10">
+                    <div class="hg3  pd7">
+                        货币查询</div>
+                </td>
+            </tr>
+            <tr style="display: none;">
+                <td class="listTdLeft" style="width: 50px;">
+                    现金余额：
+                </td>
+                <td>
+                    <select name="ddlOperator" id="ddlOperator">
+	<option value="0">=</option>
+	<option value="1">&gt;</option>
+	<option value="2">&lt;</option>
+	<option value="3">≥</option>
+	<option value="4">≤</option>
+
+</select>
+                    <input name="in_Nickname" type="text" class="text wd2" />
+                    保险柜余额：
+                    <select name="ddlOperator1" id="ddlOperator1">
+	<option value="0">=</option>
+	<option value="1">&gt;</option>
+	<option value="2">&lt;</option>
+	<option value="3">≥</option>
+	<option value="4">≤</option>
+
+</select>
+                    <input name="in_Nickname" type="text" class="text wd2" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right" style="padding-bottom: 10px;">
+                    <input type="submit" name="btnHightQuery" value="查询" id="btnHightQuery" class="btn wd1" />
+                    <input type="button" value="关闭" class="btn wd1" onclick="HideDiv()" />
+                    <input type="hidden" name="QueryType" value="1" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear"></div>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="Tmg7">
+        <tr>
+            <td height="39" class="titleOpBg">
+                <input type="button" value="新增" class="btn wd1" onclick="openWindowOwn('AddAccount.aspx','',850,600)" />
+                
+                <input class="btnLine" type="button" />
+                <input type="submit" name="btnDongjie" value="冻结" onclick="return deleteop();" id="btnDongjie" class="btn wd1" />
+                <input type="submit" name="btnJiedong" value="解冻" onclick="return deleteop();" id="btnJiedong" class="btn wd1" />
+                <input type="submit" name="btnSetting" value="设置机器人" onclick="return deleteop();" id="btnSetting" class="btn wd2" />
+                <input type="submit" name="btnCancle" value="取消机器人" onclick="return deleteop();" id="btnCancle" class="btn wd2" />
+                <input class="btnLine" type="button" />
+                <input type="button" value="赠送会员" class="btn wd2" onclick="GrantManager('GrantMember')" />
+                <input id="btnGrantTreasure" value="赠送游戏币" type="button" class="btn wd2" onclick="GrantManager('GrantTreasure')" />
+                <input id="btnGrantExperience" value="赠送经验" type="button" class="btn wd2" onclick="GrantManager('GrantExperience')" />
+                <input type="button" value="赠送积分" class="btn wd2" onclick="GrantManager('GrantScore')" />
+                <input type="button" value="清零积分" class="btn wd2" onclick="GrantManager('GrantClearScore')" />
+                <input type="button" value="清零逃率" class="btn wd2" onclick="GrantManager('GrantFlee')" />
+            </td>
+        </tr>
+    </table>
+    <div id="content">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="box" id="list">
+            <tr align="center" class="bold">
+                <td class="listTitle">
+                    <input type="checkbox" name="chkAll" onclick="SelectAll(this.checked);" />
+                </td>
+                <td class="listTitle2">
+                    用户标识
+                </td>
+                <td class="listTitle2">
+                    游戏ID
+                </td>
+                <td class="listTitle2">
+                    用户帐号
+                </td>
+                <td class="listTitle2">
+                    昵称
+                </td>
+                <td class="listTitle2">
+                    性别
+                </td>
+                <td class="listTitle2">
+                    经验值
+                </td>
+                <td class="listTitle2">
+                    魅力值
+                </td>
+                <td class="listTitle2">
+                    已兑魅力
+                </td>
+                <td class="listTitle2">
+                    会员级别
+                </td>
+                <td class="listTitle2">
+                    推广人
+                </td>
+                <td class="listTitle2">
+                    管理级别
+                </td>
+                <td class="listTitle2">
+                    注册时间
+                </td>
+                <td class="listTitle2">
+                    注册地址
+                </td>
+                <td class="listTitle2">
+                    登录次数
+                </td>
+                <td class="listTitle2">
+                    最后登录时间
+                </td>
+                <td class="listTitle2">
+                    最后登录地址
+                </td>
+                <td class="listTitle1">
+                    状态
+                </td>
+                <td class="listTitle1">
+                    管理
+                </td>
+            </tr>
+            
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17806' />
+                        </td>
+                        <td>
+                            17806
+                        </td>
+                        <td>
+                            122851
+                        </td>
+                        <td title="als271111426">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17806','17806',850,600);">
+                                als2711114</a>
+                        </td>
+                        <td>
+                            aliusong11
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-9-15 14:38:08
+                        </td>
+                        <td>
+                           223.104.25.93
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-9-15 14:38:08
+                        </td>
+                        <td>
+                            223.104.25.93
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17806','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17805' />
+                        </td>
+                        <td>
+                            17805
+                        </td>
+                        <td>
+                            122850
+                        </td>
+                        <td title="vipsnoopy">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17805','17805',850,600);">
+                                vipsnoopy</a>
+                        </td>
+                        <td>
+                            1515151
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-8-25 10:25:35
+                        </td>
+                        <td>
+                            106.87.5.159
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2016-8-25 10:25:35
+                        </td>
+                        <td>
+                             106.87.5.159
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17805','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17804' />
+                        </td>
+                        <td>
+                            17804
+                        </td>
+                        <td>
+                            122849
+                        </td>
+                        <td title="xiaozi">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17804','17804',850,600);">
+                                xiaozi</a>
+                        </td>
+                        <td>
+                            小志顶顶顶顶
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-6-16 20:20:07
+                        </td>
+                        <td>
+                           125.85.94.225
+                        </td>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            2016-9-27 21:14:47
+                        </td>
+                        <td>
+                            125.85.95.100
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17804','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17803' />
+                        </td>
+                        <td>
+                            17803
+                        </td>
+                        <td>
+                            122848
+                        </td>
+                        <td title="wsx1521">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17803','17803',850,600);">
+                                wsx1521</a>
+                        </td>
+                        <td>
+                            达维多娃
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-31 14:21:08
+                        </td>
+                        <td>
+                            115.209.233.98
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            2016-6-7 16:03:44
+                        </td>
+                        <td>
+                             61.174.123.132
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17803','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17802' />
+                        </td>
+                        <td>
+                            17802
+                        </td>
+                        <td>
+                            122847
+                        </td>
+                        <td title="xx77hhww">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17802','17802',850,600);">
+                                xx77hhww</a>
+                        </td>
+                        <td>
+                            我去好无聊
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-28 4:21:38
+                        </td>
+                        <td>
+                           113.105.135.188
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2016-5-28 4:21:38
+                        </td>
+                        <td>
+                            113.105.135.188
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17802','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17801' />
+                        </td>
+                        <td>
+                            17801
+                        </td>
+                        <td>
+                            122846
+                        </td>
+                        <td title="13908399098">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17801','17801',850,600);">
+                                1390839909</a>
+                        </td>
+                        <td>
+                            13908399099
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-24 19:32:41
+                        </td>
+                        <td>
+                            183.228.28.255
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-5-24 19:32:41
+                        </td>
+                        <td>
+                             183.228.28.255
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17801','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17800' />
+                        </td>
+                        <td>
+                            17800
+                        </td>
+                        <td>
+                            122845
+                        </td>
+                        <td title="mmagg001">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17800','17800',850,600);">
+                                mmagg001</a>
+                        </td>
+                        <td>
+                            hvhjgjm
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-21 10:13:34
+                        </td>
+                        <td>
+                           115.209.235.163
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2016-5-21 10:13:34
+                        </td>
+                        <td>
+                            115.209.235.163
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17800','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17799' />
+                        </td>
+                        <td>
+                            17799
+                        </td>
+                        <td>
+                            122844
+                        </td>
+                        <td title="aabuqu">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17799','17799',850,600);">
+                                aabuqu</a>
+                        </td>
+                        <td>
+                            5we4r5w
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-15 12:49:19
+                        </td>
+                        <td>
+                            117.32.97.38
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2016-5-15 12:49:19
+                        </td>
+                        <td>
+                             117.32.97.38
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17799','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17798' />
+                        </td>
+                        <td>
+                            17798
+                        </td>
+                        <td>
+                            122843
+                        </td>
+                        <td title="test004">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17798','17798',850,600);">
+                                test004</a>
+                        </td>
+                        <td>
+                            test004
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            600
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            <span style='color:#FF6600; font-weight:bold;'>VIP</span>
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-5 15:26:42
+                        </td>
+                        <td>
+                           27.11.85.168
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-5-5 15:26:42
+                        </td>
+                        <td>
+                            27.11.85.168
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17798','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17797' />
+                        </td>
+                        <td>
+                            17797
+                        </td>
+                        <td>
+                            122842
+                        </td>
+                        <td title="test003">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17797','17797',850,600);">
+                                test003</a>
+                        </td>
+                        <td>
+                            test003
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            600
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            <span style='color:#FF6600; font-weight:bold;'>VIP</span>
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-5 15:26:14
+                        </td>
+                        <td>
+                            27.11.85.168
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-5-5 15:26:14
+                        </td>
+                        <td>
+                             27.11.85.168
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17797','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17796' />
+                        </td>
+                        <td>
+                            17796
+                        </td>
+                        <td>
+                            122841
+                        </td>
+                        <td title="test002">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17796','17796',850,600);">
+                                test002</a>
+                        </td>
+                        <td>
+                            test002
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            600
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            <span style='color:#FF6600; font-weight:bold;'>VIP</span>
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-5-5 15:23:23
+                        </td>
+                        <td>
+                           27.11.85.168
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-5-5 15:23:23
+                        </td>
+                        <td>
+                            27.11.85.168
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17796','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17795' />
+                        </td>
+                        <td>
+                            17795
+                        </td>
+                        <td>
+                            6783
+                        </td>
+                        <td title="my0xsec">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17795','17795',850,600);">
+                                my0xsec</a>
+                        </td>
+                        <td>
+                            my0xsec
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            62462
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            <span style='color:#FF6600; font-weight:bold;'>VIP</span>
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-4-21 21:39:18
+                        </td>
+                        <td>
+                            182.135.162.123
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            2016-4-23 22:23:23
+                        </td>
+                        <td>
+                             182.135.162.123
+                        </td>
+                        <td>
+                            <span class='hong'>禁用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17795','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17794' />
+                        </td>
+                        <td>
+                            17794
+                        </td>
+                        <td>
+                            122839
+                        </td>
+                        <td title="bajin8888">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17794','17794',850,600);">
+                                bajin8888</a>
+                        </td>
+                        <td>
+                            八斤8888
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-4-21 13:08:32
+                        </td>
+                        <td>
+                           106.87.8.82
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2016-4-21 13:08:32
+                        </td>
+                        <td>
+                            106.87.8.82
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17794','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17793' />
+                        </td>
+                        <td>
+                            17793
+                        </td>
+                        <td>
+                            122838
+                        </td>
+                        <td title="tzyyuanlaiai">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17793','17793',850,600);">
+                                tzyyuanlai</a>
+                        </td>
+                        <td>
+                            dfakld
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-4-18 13:57:48
+                        </td>
+                        <td>
+                            120.39.117.46
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            2016-4-18 13:59:15
+                        </td>
+                        <td>
+                             120.39.117.46
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17793','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17792' />
+                        </td>
+                        <td>
+                            17792
+                        </td>
+                        <td>
+                            79829
+                        </td>
+                        <td title="zaq123xxx">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17792','17792',850,600);">
+                                zaq123xxx</a>
+                        </td>
+                        <td>
+                            蔡思涛
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            1370
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            <span style='color:#FF6600; font-weight:bold;'>VIP</span>
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-4-14 21:39:13
+                        </td>
+                        <td>
+                           59.49.236.112
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            2016-4-14 21:59:04
+                        </td>
+                        <td>
+                            59.49.236.112
+                        </td>
+                        <td>
+                            <span class='hong'>禁用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17792','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17791' />
+                        </td>
+                        <td>
+                            17791
+                        </td>
+                        <td>
+                            122836
+                        </td>
+                        <td title="lleekk">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17791','17791',850,600);">
+                                lleekk</a>
+                        </td>
+                        <td>
+                            lleekklll
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            4219
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            <span style='color:#FF6600; font-weight:bold;'>VIP</span>
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-4-14 21:34:13
+                        </td>
+                        <td>
+                            59.49.236.112
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            2016-4-15 5:39:25
+                        </td>
+                        <td>
+                             59.49.236.111
+                        </td>
+                        <td>
+                            <span class='hong'>禁用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17791','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17790' />
+                        </td>
+                        <td>
+                            17790
+                        </td>
+                        <td>
+                            122835
+                        </td>
+                        <td title="局局654321">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17790','17790',850,600);">
+                                局局654321</a>
+                        </td>
+                        <td>
+                            聚聚聚聚聚聚
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-4-11 22:28:33
+                        </td>
+                        <td>
+                           125.85.90.174
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-4-11 22:28:33
+                        </td>
+                        <td>
+                            125.85.90.174
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17790','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17789' />
+                        </td>
+                        <td>
+                            17789
+                        </td>
+                        <td>
+                            122834
+                        </td>
+                        <td title="AA156229">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17789','17789',850,600);">
+                                AA156229</a>
+                        </td>
+                        <td>
+                            ZCDCKSXXX
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-3-27 2:24:51
+                        </td>
+                        <td>
+                            111.8.239.113
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            2016-3-27 2:39:18
+                        </td>
+                        <td>
+                             111.8.239.113
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17789','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17788' />
+                        </td>
+                        <td>
+                            17788
+                        </td>
+                        <td>
+                            122833
+                        </td>
+                        <td title="tianyukuai">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17788','17788',850,600);">
+                                tianyukuai</a>
+                        </td>
+                        <td>
+                            yukuai
+                        </td>
+                        <td>
+                            男
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                         <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-3-17 14:33:18
+                        </td>
+                        <td>
+                           182.150.22.45
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2016-3-17 17:34:39
+                        </td>
+                        <td>
+                            119.161.167.101
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17788','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor='#caebfc';this.style.cursor='default';"
+                        onmouseout="this.style.backgroundColor=currentcolor">
+                        <td style="width: 30px;">
+                            <input name='cid' type='checkbox' value='17787' />
+                        </td>
+                        <td>
+                            17787
+                        </td>
+                        <td>
+                            122832
+                        </td>
+                        <td title="okokwu">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn('AccountsInfo.aspx?param=17787','17787',850,600);">
+                                okokwu</a>
+                        </td>
+                        <td>
+                            忘记你的笑
+                        </td>
+                        <td>
+                            女
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            普通会员
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            普通玩家
+                        </td>
+                        <td>
+                            2016-3-13 16:05:22
+                        </td>
+                        <td>
+                            220.160.44.156
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            2016-4-16 16:25:23
+                        </td>
+                        <td>
+                             121.204.196.60
+                        </td>
+                        <td>
+                            <span>启用</span>
+                        </td>
+                        <td>
+                            <a class="l" href="javascript:void(0)" onclick="javascript:openWindowOwn('GrantGameID.aspx?param=17787','_GrantGameID',600,260);">
+                                赠送靓号</a>
+                        </td>
+                    </tr>
+                
+            
+        </table>
+    </div>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="listTitleBg">
+                <span>选择：</span>&nbsp;<a class="l1" href="javascript:SelectAll(true);">全部</a>&nbsp;-&nbsp;<a class="l1" href="javascript:SelectAll(false);">无</a>
+            </td>
+            <td align="right" class="page">
+                <div id="anpPage">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="bottom" nowrap="true" style="width:40%;">总记录：8092　页码：1/405　每页：20</td><td valign="bottom" nowrap="true" style="width:60%;"><a disabled="disabled" style="margin-right:5px;">首页</a><a disabled="disabled" style="margin-right:5px;">上页</a><span style="margin-right:5px;font-weight:Bold;color:red;">1</span><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;2&#39;)" style="margin-right:5px;">2</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;3&#39;)" style="margin-right:5px;">3</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;4&#39;)" style="margin-right:5px;">4</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;5&#39;)" style="margin-right:5px;">5</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;6&#39;)" style="margin-right:5px;">...</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;2&#39;)" style="margin-right:5px;">下页</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;405&#39;)" style="margin-right:5px;">末页</a>&nbsp;&nbsp;<input type="text" value="1" name="anpPage_input" id="anpPage_input" onkeydown="ANP_keydown(event,&#39;anpPage_btn&#39;);" style="width:30px;" /><input type="submit" value="go" name="anpPage" id="anpPage_btn" onclick="if(ANP_checkInput(&#39;anpPage_input&#39;,405)){__doPostBack(&#39;anpPage&#39;,&#39;&#39;)} else{return false}" /></td>
+	</tr>
+</table>
+</div>
+
+
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="OpList">
+        <tr>
+            <td height="39" class="titleOpBg">
+                <input type="button" value="新增" class="btn wd1" onclick="openWindowOwn('AddAccount.aspx','',850,600)" />
+                
+                <input class="btnLine" type="button" />
+                <input type="submit" name="btnDongjie1" value="冻结" onclick="return deleteop();" id="btnDongjie1" class="btn wd1" />
+                <input type="submit" name="btnJiedong1" value="解冻" onclick="return deleteop();" id="btnJiedong1" class="btn wd1" />
+                <input type="submit" name="btnSetting1" value="设置机器人" onclick="return deleteop();" id="btnSetting1" class="btn wd2" />
+                <input type="submit" name="btnCancle1" value="取消机器人" onclick="return deleteop();" id="btnCancle1" class="btn wd2" />
+                <input class="btnLine" type="button" />
+                <input type="button" value="赠送会员" class="btn wd2" onclick="GrantManager('GrantMember')" />
+                <input id="btnGrantTreasure2" type="button" value="赠送游戏币" class="btn wd2" onclick="GrantManager('GrantTreasure')" />
+                <input id="btnGrantExperience2" type="button" value="赠送经验" class="btn wd2" onclick="GrantManager('GrantExperience')" />
+                <input type="button" value="赠送积分" class="btn wd2" onclick="GrantManager('GrantScore')" />
+                <input type="button" value="清零积分" class="btn wd2" onclick="GrantManager('GrantClearScore')" />
+                <input type="button" value="清零逃率" class="btn wd2" onclick="GrantManager('GrantFlee')" />
+            </td>
+        </tr>
+    </table>
+    
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+</form>
+</body>
+</html>

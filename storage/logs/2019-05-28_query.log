@@ -1,0 +1,300 @@
+2019-05-28 09:15:21: select * from `permissions`
+2019-05-28 09:15:21: select `roles`.*, `permission_role`.`permission_id` as `pivot_permission_id`, `permission_role`.`role_id` as `pivot_role_id` from `roles` inner join `permission_role` on `roles`.`id` = `permission_role`.`role_id` where `permission_role`.`permission_id` in (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50)
+2019-05-28 09:15:22: select * from `android_update` where `ifsend` = 1
+2019-05-28 09:15:22: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '1')
+2019-05-28 09:15:22: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '1')
+2019-05-28 09:15:22: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '1')
+2019-05-28 09:15:22: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '1')
+2019-05-28 09:15:22: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and addtime='2019-05-28'
+2019-05-28 09:15:22: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and addtime='2019-05-27'
+2019-05-28 09:15:22: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:23: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:23: select count(*) as num from statistics where module='0' and novelid=0 and channel=1  and addtime='2019-05-28'
+2019-05-28 09:15:23: select count(*) as num from statistics where module='0' and novelid=0 and channel=1 and addtime='2019-05-27'
+2019-05-28 09:15:23: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '1' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:23: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '1' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:23: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '1')
+2019-05-28 09:15:23: select count(distinct(uid)) as num from statistics where uid in ('122549','111879') and novelid>0 and channel=1 and addtime='2019-05-28'
+2019-05-28 09:15:23: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '2')
+2019-05-28 09:15:23: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '2')
+2019-05-28 09:15:23: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '2')
+2019-05-28 09:15:24: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '2')
+2019-05-28 09:15:24: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and addtime='2019-05-28'
+2019-05-28 09:15:24: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and addtime='2019-05-27'
+2019-05-28 09:15:24: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:24: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:24: select count(*) as num from statistics where module='0' and novelid=0 and channel=2  and addtime='2019-05-28'
+2019-05-28 09:15:24: select count(*) as num from statistics where module='0' and novelid=0 and channel=2 and addtime='2019-05-27'
+2019-05-28 09:15:24: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '2' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:25: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '2' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:25: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '2')
+2019-05-28 09:15:25: select count(distinct(uid)) as num from statistics where uid in ('122560','121929') and novelid>0 and channel=2 and addtime='2019-05-28'
+2019-05-28 09:15:25: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '3')
+2019-05-28 09:15:25: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '3')
+2019-05-28 09:15:25: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '3')
+2019-05-28 09:15:25: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '3')
+2019-05-28 09:15:25: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and addtime='2019-05-28'
+2019-05-28 09:15:25: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and addtime='2019-05-27'
+2019-05-28 09:15:26: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:26: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:26: select count(*) as num from statistics where module='0' and novelid=0 and channel=3  and addtime='2019-05-28'
+2019-05-28 09:15:26: select count(*) as num from statistics where module='0' and novelid=0 and channel=3 and addtime='2019-05-27'
+2019-05-28 09:15:26: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '3' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:26: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '3' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:26: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '3')
+2019-05-28 09:15:26: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '4')
+2019-05-28 09:15:26: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '4')
+2019-05-28 09:15:26: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '4')
+2019-05-28 09:15:27: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '4')
+2019-05-28 09:15:27: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and addtime='2019-05-28'
+2019-05-28 09:15:27: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and addtime='2019-05-27'
+2019-05-28 09:15:27: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:27: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:27: select count(*) as num from statistics where module='0' and novelid=0 and channel=4  and addtime='2019-05-28'
+2019-05-28 09:15:27: select count(*) as num from statistics where module='0' and novelid=0 and channel=4 and addtime='2019-05-27'
+2019-05-28 09:15:28: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '4' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:28: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '4' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:28: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '4')
+2019-05-28 09:15:28: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '5')
+2019-05-28 09:15:28: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '5')
+2019-05-28 09:15:28: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '5')
+2019-05-28 09:15:28: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '5')
+2019-05-28 09:15:28: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and addtime='2019-05-28'
+2019-05-28 09:15:28: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and addtime='2019-05-27'
+2019-05-28 09:15:29: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:29: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:29: select count(*) as num from statistics where module='0' and novelid=0 and channel=5  and addtime='2019-05-28'
+2019-05-28 09:15:29: select count(*) as num from statistics where module='0' and novelid=0 and channel=5 and addtime='2019-05-27'
+2019-05-28 09:15:29: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '5' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:29: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '5' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:29: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '5')
+2019-05-28 09:15:29: select count(distinct(uid)) as num from statistics where uid in ('122600') and novelid>0 and channel=5 and addtime='2019-05-28'
+2019-05-28 09:15:30: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '6')
+2019-05-28 09:15:30: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '6')
+2019-05-28 09:15:30: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '6')
+2019-05-28 09:15:30: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '6')
+2019-05-28 09:15:30: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and addtime='2019-05-28'
+2019-05-28 09:15:30: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and addtime='2019-05-27'
+2019-05-28 09:15:30: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:30: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:31: select count(*) as num from statistics where module='0' and novelid=0 and channel=6  and addtime='2019-05-28'
+2019-05-28 09:15:31: select count(*) as num from statistics where module='0' and novelid=0 and channel=6 and addtime='2019-05-27'
+2019-05-28 09:15:31: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '6' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:31: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '6' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:31: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '6')
+2019-05-28 09:15:31: select count(distinct(uid)) as num from statistics where uid in ('122545','122546','122547','122550','122551','122554','122555','122558','122557','120623','122559','121814','122562','122561','122566','122125','122476','122569','122570','122571','122572','106106','122574','122573','122151','122575','122576','122578','122577','122579','122580','122582','122581','122583','122584','122585','122588','122589','122590','122596','122597','122601','122603','122604') and novelid>0 and channel=6 and addtime='2019-05-28'
+2019-05-28 09:15:31: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '7')
+2019-05-28 09:15:31: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '7')
+2019-05-28 09:15:31: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '7')
+2019-05-28 09:15:31: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '7')
+2019-05-28 09:15:31: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and addtime='2019-05-28'
+2019-05-28 09:15:32: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and addtime='2019-05-27'
+2019-05-28 09:15:32: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:32: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:32: select count(*) as num from statistics where module='0' and novelid=0 and channel=7  and addtime='2019-05-28'
+2019-05-28 09:15:32: select count(*) as num from statistics where module='0' and novelid=0 and channel=7 and addtime='2019-05-27'
+2019-05-28 09:15:32: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '7' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:32: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '7' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:33: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '7')
+2019-05-28 09:15:33: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '8')
+2019-05-28 09:15:33: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '8')
+2019-05-28 09:15:33: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '8')
+2019-05-28 09:15:33: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '8')
+2019-05-28 09:15:33: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and addtime='2019-05-28'
+2019-05-28 09:15:33: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and addtime='2019-05-27'
+2019-05-28 09:15:33: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:34: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:34: select count(*) as num from statistics where module='0' and novelid=0 and channel=8  and addtime='2019-05-28'
+2019-05-28 09:15:34: select count(*) as num from statistics where module='0' and novelid=0 and channel=8 and addtime='2019-05-27'
+2019-05-28 09:15:34: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '8' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:34: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '8' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:34: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '8')
+2019-05-28 09:15:34: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '13')
+2019-05-28 09:15:34: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '13')
+2019-05-28 09:15:34: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '13')
+2019-05-28 09:15:34: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '13')
+2019-05-28 09:15:34: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and addtime='2019-05-28'
+2019-05-28 09:15:35: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and addtime='2019-05-27'
+2019-05-28 09:15:35: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:35: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:35: select count(*) as num from statistics where module='0' and novelid=0 and channel=13  and addtime='2019-05-28'
+2019-05-28 09:15:35: select count(*) as num from statistics where module='0' and novelid=0 and channel=13 and addtime='2019-05-27'
+2019-05-28 09:15:35: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '13' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:35: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '13' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:36: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '13')
+2019-05-28 09:15:36: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '14')
+2019-05-28 09:15:36: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '14')
+2019-05-28 09:15:36: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '14')
+2019-05-28 09:15:36: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '14')
+2019-05-28 09:15:36: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and addtime='2019-05-28'
+2019-05-28 09:15:36: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and addtime='2019-05-27'
+2019-05-28 09:15:36: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:37: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:37: select count(*) as num from statistics where module='0' and novelid=0 and channel=14  and addtime='2019-05-28'
+2019-05-28 09:15:37: select count(*) as num from statistics where module='0' and novelid=0 and channel=14 and addtime='2019-05-27'
+2019-05-28 09:15:37: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '14' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:37: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '14' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:37: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '14')
+2019-05-28 09:15:37: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '15')
+2019-05-28 09:15:37: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '15')
+2019-05-28 09:15:37: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '15')
+2019-05-28 09:15:38: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '15')
+2019-05-28 09:15:38: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and addtime='2019-05-28'
+2019-05-28 09:15:38: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and addtime='2019-05-27'
+2019-05-28 09:15:38: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:15:38: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:15:38: select count(*) as num from statistics where module='0' and novelid=0 and channel=15  and addtime='2019-05-28'
+2019-05-28 09:15:38: select count(*) as num from statistics where module='0' and novelid=0 and channel=15 and addtime='2019-05-27'
+2019-05-28 09:15:39: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '15' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:15:39: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '15' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:15:39: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '15')
+2019-05-28 09:28:05: select * from `permissions`
+2019-05-28 09:28:05: select `roles`.*, `permission_role`.`permission_id` as `pivot_permission_id`, `permission_role`.`role_id` as `pivot_role_id` from `roles` inner join `permission_role` on `roles`.`id` = `permission_role`.`role_id` where `permission_role`.`permission_id` in (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50)
+2019-05-28 09:28:06: select * from `android_update` where `ifsend` = 1
+2019-05-28 09:28:06: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '1')
+2019-05-28 09:28:06: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '1')
+2019-05-28 09:28:06: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '1')
+2019-05-28 09:28:06: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '1')
+2019-05-28 09:28:06: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and addtime='2019-05-28'
+2019-05-28 09:28:06: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and addtime='2019-05-27'
+2019-05-28 09:28:06: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:07: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=1 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:07: select count(*) as num from statistics where module='0' and novelid=0 and channel=1  and addtime='2019-05-28'
+2019-05-28 09:28:07: select count(*) as num from statistics where module='0' and novelid=0 and channel=1 and addtime='2019-05-27'
+2019-05-28 09:28:07: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '1')
+2019-05-28 09:28:07: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '1' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:07: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '1' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:07: select count(distinct(uid)) as num from statistics where uid in ('122549','111879') and novelid>0 and channel=1 and addtime='2019-05-28'
+2019-05-28 09:28:07: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '2')
+2019-05-28 09:28:07: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '2')
+2019-05-28 09:28:07: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '2')
+2019-05-28 09:28:07: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '2')
+2019-05-28 09:28:08: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and addtime='2019-05-28'
+2019-05-28 09:28:08: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and addtime='2019-05-27'
+2019-05-28 09:28:08: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:08: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=2 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:08: select count(*) as num from statistics where module='0' and novelid=0 and channel=2  and addtime='2019-05-28'
+2019-05-28 09:28:08: select count(*) as num from statistics where module='0' and novelid=0 and channel=2 and addtime='2019-05-27'
+2019-05-28 09:28:08: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '2')
+2019-05-28 09:28:08: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '2' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:09: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '2' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:09: select count(distinct(uid)) as num from statistics where uid in ('122560','121929') and novelid>0 and channel=2 and addtime='2019-05-28'
+2019-05-28 09:28:09: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '3')
+2019-05-28 09:28:09: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '3')
+2019-05-28 09:28:09: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '3')
+2019-05-28 09:28:09: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '3')
+2019-05-28 09:28:09: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and addtime='2019-05-28'
+2019-05-28 09:28:09: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and addtime='2019-05-27'
+2019-05-28 09:28:09: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:10: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=3 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:10: select count(*) as num from statistics where module='0' and novelid=0 and channel=3  and addtime='2019-05-28'
+2019-05-28 09:28:10: select count(*) as num from statistics where module='0' and novelid=0 and channel=3 and addtime='2019-05-27'
+2019-05-28 09:28:10: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '3')
+2019-05-28 09:28:10: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '3' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:10: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '3' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:10: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '4')
+2019-05-28 09:28:10: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '4')
+2019-05-28 09:28:10: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '4')
+2019-05-28 09:28:10: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '4')
+2019-05-28 09:28:10: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and addtime='2019-05-28'
+2019-05-28 09:28:10: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and addtime='2019-05-27'
+2019-05-28 09:28:11: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:11: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=4 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:11: select count(*) as num from statistics where module='0' and novelid=0 and channel=4  and addtime='2019-05-28'
+2019-05-28 09:28:11: select count(*) as num from statistics where module='0' and novelid=0 and channel=4 and addtime='2019-05-27'
+2019-05-28 09:28:11: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '4')
+2019-05-28 09:28:11: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '4' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:11: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '4' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:11: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '5')
+2019-05-28 09:28:12: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '5')
+2019-05-28 09:28:12: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '5')
+2019-05-28 09:28:12: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '5')
+2019-05-28 09:28:12: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and addtime='2019-05-28'
+2019-05-28 09:28:12: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and addtime='2019-05-27'
+2019-05-28 09:28:12: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:12: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=5 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:12: select count(*) as num from statistics where module='0' and novelid=0 and channel=5  and addtime='2019-05-28'
+2019-05-28 09:28:13: select count(*) as num from statistics where module='0' and novelid=0 and channel=5 and addtime='2019-05-27'
+2019-05-28 09:28:13: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '5')
+2019-05-28 09:28:13: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '5' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:13: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '5' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:13: select count(distinct(uid)) as num from statistics where uid in ('122600') and novelid>0 and channel=5 and addtime='2019-05-28'
+2019-05-28 09:28:13: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '6')
+2019-05-28 09:28:13: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '6')
+2019-05-28 09:28:13: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '6')
+2019-05-28 09:28:13: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '6')
+2019-05-28 09:28:13: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and addtime='2019-05-28'
+2019-05-28 09:28:13: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and addtime='2019-05-27'
+2019-05-28 09:28:14: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:14: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=6 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:14: select count(*) as num from statistics where module='0' and novelid=0 and channel=6  and addtime='2019-05-28'
+2019-05-28 09:28:14: select count(*) as num from statistics where module='0' and novelid=0 and channel=6 and addtime='2019-05-27'
+2019-05-28 09:28:14: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '6')
+2019-05-28 09:28:14: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '6' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:14: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '6' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:14: select count(distinct(uid)) as num from statistics where uid in ('122545','122546','122547','122550','122551','122554','122555','122558','122557','120623','122559','121814','122562','122561','122566','122125','122476','122569','122570','122571','122572','106106','122574','122573','122151','122575','122576','122578','122577','122579','122580','122582','122581','122583','122584','122585','122588','122589','122590','122596','122597','122601','122603','122604') and novelid>0 and channel=6 and addtime='2019-05-28'
+2019-05-28 09:28:14: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '7')
+2019-05-28 09:28:15: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '7')
+2019-05-28 09:28:15: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '7')
+2019-05-28 09:28:15: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '7')
+2019-05-28 09:28:15: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and addtime='2019-05-28'
+2019-05-28 09:28:15: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and addtime='2019-05-27'
+2019-05-28 09:28:15: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:15: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=7 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:15: select count(*) as num from statistics where module='0' and novelid=0 and channel=7  and addtime='2019-05-28'
+2019-05-28 09:28:15: select count(*) as num from statistics where module='0' and novelid=0 and channel=7 and addtime='2019-05-27'
+2019-05-28 09:28:16: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '7')
+2019-05-28 09:28:16: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '7' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:16: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '7' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:16: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '8')
+2019-05-28 09:28:16: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '8')
+2019-05-28 09:28:16: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '8')
+2019-05-28 09:28:16: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '8')
+2019-05-28 09:28:16: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and addtime='2019-05-28'
+2019-05-28 09:28:16: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and addtime='2019-05-27'
+2019-05-28 09:28:16: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:17: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=8 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:17: select count(*) as num from statistics where module='0' and novelid=0 and channel=8  and addtime='2019-05-28'
+2019-05-28 09:28:17: select count(*) as num from statistics where module='0' and novelid=0 and channel=8 and addtime='2019-05-27'
+2019-05-28 09:28:17: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '8')
+2019-05-28 09:28:17: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '8' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:17: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '8' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:17: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '13')
+2019-05-28 09:28:17: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '13')
+2019-05-28 09:28:17: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '13')
+2019-05-28 09:28:17: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '13')
+2019-05-28 09:28:18: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and addtime='2019-05-28'
+2019-05-28 09:28:18: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and addtime='2019-05-27'
+2019-05-28 09:28:18: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:18: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=13 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:18: select count(*) as num from statistics where module='0' and novelid=0 and channel=13  and addtime='2019-05-28'
+2019-05-28 09:28:18: select count(*) as num from statistics where module='0' and novelid=0 and channel=13 and addtime='2019-05-27'
+2019-05-28 09:28:18: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '13')
+2019-05-28 09:28:18: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '13' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:18: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '13' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:19: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '14')
+2019-05-28 09:28:19: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '14')
+2019-05-28 09:28:19: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '14')
+2019-05-28 09:28:19: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '14')
+2019-05-28 09:28:19: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and addtime='2019-05-28'
+2019-05-28 09:28:19: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and addtime='2019-05-27'
+2019-05-28 09:28:19: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:19: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=14 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:20: select count(*) as num from statistics where module='0' and novelid=0 and channel=14  and addtime='2019-05-28'
+2019-05-28 09:28:20: select count(*) as num from statistics where module='0' and novelid=0 and channel=14 and addtime='2019-05-27'
+2019-05-28 09:28:20: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '14')
+2019-05-28 09:28:20: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '14' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:20: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '14' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'
+2019-05-28 09:28:20: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-28' and `channel` = '15')
+2019-05-28 09:28:20: select count(*) as aggregate from `statistics` where (`firstvisit` = 2 and `addtime` = '2019-05-27' and `channel` = '15')
+2019-05-28 09:28:20: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-28' and `channel` = '15')
+2019-05-28 09:28:20: select count(*) as aggregate from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '15')
+2019-05-28 09:28:20: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and addtime='2019-05-28'
+2019-05-28 09:28:20: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and addtime='2019-05-27'
+2019-05-28 09:28:21: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and timestamp>='1559005200' and timestamp <= '1559008799'
+2019-05-28 09:28:21: select count(DISTINCT(uid)) as num  from statistics where   novelid>0 and channel=15 and timestamp>='1559001600' and timestamp <='1559005199' 
+2019-05-28 09:28:21: select count(*) as num from statistics where module='0' and novelid=0 and channel=15  and addtime='2019-05-28'
+2019-05-28 09:28:21: select count(*) as num from statistics where module='0' and novelid=0 and channel=15 and addtime='2019-05-27'
+2019-05-28 09:28:21: select * from `statistics` where (`firstvisit` = 1 and `addtime` = '2019-05-27' and `channel` = '15')
+2019-05-28 09:28:21: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '15' and `regtime` >= '2019-05-28 00:00:00' and `regtime` <= '2019-05-28 23:59:59'
+2019-05-28 09:28:21: select count(*) as aggregate from `novel_user` where `userfrom` > 1 and `channel` = '15' and `regtime` >= '2019-05-27 00:00:00' and `regtime` <= '2019-05-27 23:59:59'

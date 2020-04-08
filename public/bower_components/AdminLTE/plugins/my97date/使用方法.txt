@@ -1,0 +1,1 @@
+<input type="text" name="time" class="form-control margint20" value="" id="time" datatype="*" placeholder="开服时间" nullmsg="请输入开服时间" onclick="WdatePicker()"  js="datepicker" readonly="1">

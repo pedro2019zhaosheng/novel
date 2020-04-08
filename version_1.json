@@ -1,0 +1,17 @@
+{
+    "status": 1,
+    "message": "success",
+    "data": {
+        "name": "版本更新",
+        "version_name": "1.0.7",
+        "version_code": 7,
+        "force_update": 1,
+        "force_versions": null,
+        "url": "http://192.168.1.102:8040/storage/shiliu_Dev_channel1_ShiLiu_release_v1.0.8_2019_0401.apk",
+        "icon": "",
+        "description": "1、优化\\n2、优化优化优",
+        "size": "20M",
+        "channel_id": 1,
+        "created_at": "2019-04-18 01:56:25"
+    }
+}

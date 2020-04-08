@@ -1,0 +1,26 @@
+.bakcor{
+  background-color: #E2E6EC;
+  border-color: #ECF0F5;
+  font-weight:100;
+  height: auto;
+}
+
+.thibclor{
+  background-color: #E2E6EC;
+  border-color: #ECF0F5;
+  font-weight: 100;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.cactive{
+  background-color:#184165
+}
+.content-pane{
+  height:30px!important;
+}
+
+.content{
+  clip: rect(0px 170px 250px -100px)!important;
+}

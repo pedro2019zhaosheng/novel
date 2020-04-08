@@ -1,0 +1,1657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0074)http://www.168023.com:8080/Module/AccountManager/AccountsGoldList.aspx?778 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+
+</title><link href="./layout.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./common.js.下载"></script>
+    <script type="text/javascript" src="./comm.js.下载"></script>
+</head>
+<body>
+    <form name="form1" method="post" action="http://www.168023.com:8080/Module/AccountManager/AccountsGoldList.aspx?778" id="form1">
+ 
+
+<script language="Javascript"><!--
+function ANP_checkInput(bid,mv){var el=document.getElementById(bid);var r=new RegExp("^\\s*(\\d+)\\s*$");
+if(r.test(el.value)){if(RegExp.$1<1||RegExp.$1>mv){alert("页索引超出范围！");el.focus();el.select();return false;}
+return true;}alert("页索引不是有效的数值！");el.focus();el.select();return false;}
+function ANP_keydown(e,btnId){
+var kcode;
+if(window.event){kcode=e.keyCode;}
+else if(e.which){kcode=e.which;}
+var validKey=(kcode==8||kcode==46||kcode==37||kcode==39||(kcode>=48&&kcode<=57)||(kcode>=96&&kcode<=105));
+if(!validKey){
+if(kcode==13) document.getElementById(btnId).click();
+if(e.preventDefault) e.preventDefault();else{event.returnValue=false};
+}
+}
+--></script>
+<div>
+
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDALdk8qNCwKZ7YzdCgKK3t+nAwKL3t+nAwKI3t+nAwKJ3t+nAwKO3t+nAwKP3t+nAwKM3t+nAwKd3t+nAwLvjry/BQLAn+vmDPBADfkTNybQrNYtyjJLxVjUCOWdSgcd7ZD0WpErF+72">
+</div>
+    <!-- 头部菜单 Start -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
+        <tbody><tr>
+            <td width="19" height="25" valign="top" class="Lpd10">
+                <div class="arr">
+                </div>
+            </td>
+            <td width="1232" height="25" valign="top" align="left">
+                你当前位置：用户系统 - 游戏币管理
+            </td>
+        </tr>
+    </tbody></table>
+    <!-- 头部菜单 End -->
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="titleQueBg">
+        <tbody><tr>
+            <td class="listTdLeft" style="width: 80px">
+                普通查询：
+            </td>
+            <td>
+                <input name="txtSearch" type="text" id="txtSearch" class="text">
+                <select name="ddlSearchType" id="ddlSearchType">
+	<option value="1">按用户帐号</option>
+	<option value="2">按游戏ID</option>
+	<option value="3">按携带游戏币大于等于</option>
+	<option value="4">按携带游戏币小于等于</option>
+	<option value="5">按保险柜游戏币大于等于</option>
+	<option value="6">按保险柜游戏币小于等于</option>
+	<option value="7">按游戏税收大于等于</option>
+	<option value="8">按游戏税收小于等于</option>
+
+</select>
+                <input type="submit" name="btnQuery" value="查询" id="btnQuery" class="btn wd1">
+                <input type="submit" name="btnRefresh" value="刷新" id="btnRefresh" class="btn wd1">
+            </td>
+        </tr>
+    </tbody></table>
+    <div id="content" style="height: 700px;">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="box Tmg7" id="list">
+            <tbody><tr align="center" class="bold"> 
+                <td class="listTitle2">
+                    游戏ID
+                </td> 
+                <td class="listTitle2">
+                    用户帐号
+                </td>
+                <td class="listTitle2">
+                    用户昵称
+                </td>      
+                <td class="listTitle2" axis="Score">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;Score&quot;)" class="l1">携带游戏币</a> 
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;InsureScore&quot;)" class="l1">保险柜游戏币</a>
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;Score,InsureScore&quot;)" class="l1">携带+保险柜</a>
+                </td>
+                <td class="listTitle2">
+                    元宝
+                </td>
+                <td class="listTitle2">
+                    已兑换魅力
+                </td>
+                <td class="listTitle2">
+                    魅力值
+                </td>
+                
+                <td class="listTitle2">
+                    经验值
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;Revenue&quot;)" class="l1">税收</a>
+                </td>
+                <td class="listTitle2">
+                     <a href="Javascript:void(0);" onclick="OrderBy(&quot;WinCount,LostCount,DrawCount,FleeCount&quot;)" class="l1">总局</a>
+                </td>
+                
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;WinCount&quot;)" class="l1">赢局</a>
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;LostCount&quot;)" class="l1">输局</a>
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;DrawCount&quot;)" class="l1">和局</a>
+                </td>
+                
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;FleeCount&quot;)" class="l1">逃局</a>
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;AllLogonTimes&quot;)" class="l1">登录次数</a>
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;PlayTimeCount&quot;)" class="l1">游戏时长</a>
+                </td>         
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;OnLineTimeCount&quot;)" class="l1">在线时长</a>
+                </td>
+                <td class="listTitle2">
+                    所在游戏
+                </td>
+                <td class="listTitle2">
+                    所在房间
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;LastLogonDate&quot;)" class="l1">最后登录时间</a>
+                </td>
+                <td class="listTitle2">
+                    <a href="Javascript:void(0);" onclick="OrderBy(&quot;LastLogonIP&quot;)" class="l1">最后登录地址</a>
+                </td>
+            </tr>
+            
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122851
+                        </td>    
+                        <td title="als271111426">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17806&#39;,&#39;17806&#39;,850,600);">
+                                als271111426</a>
+                        </td>
+                        <td>
+                            aliusong11
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-9-15 14:38:08
+                        </td>
+                        <td title="重庆市 移动">
+                            223.104.25.93
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122850
+                        </td>
+                        <td title="vipsnoopy">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17805&#39;,&#39;17805&#39;,850,600);">
+                                vipsnoopy</a>
+                        </td>
+                         <td>
+                            1515151
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            216
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-8-25 10:27:23
+                        </td>
+                        <td title="重庆市 电信">
+                            106.87.5.159
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122849
+                        </td>    
+                        <td title="xiaozi">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17804&#39;,&#39;17804&#39;,850,600);">
+                                xiaozi</a>
+                        </td>
+                        <td>
+                            小志顶顶顶顶
+                        </td>
+                        <td>
+                            1,500
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,500
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-6-16 20:21:14
+                        </td>
+                        <td title="重庆市南岸区 电信">
+                            125.85.94.225
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122848
+                        </td>
+                        <td title="wsx1521">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17803&#39;,&#39;17803&#39;,850,600);">
+                                wsx1521</a>
+                        </td>
+                         <td>
+                            达维多娃
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            8
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            107
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-6-7 16:04:05
+                        </td>
+                        <td title="浙江省丽水市 电信ADSL">
+                            61.174.123.132
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122847
+                        </td>    
+                        <td title="xx77hhww">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17802&#39;,&#39;17802&#39;,850,600);">
+                                xx77hhww</a>
+                        </td>
+                        <td>
+                            我去好无聊
+                        </td>
+                        <td>
+                            1,500
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,500
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            302
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-28 4:41:08
+                        </td>
+                        <td title="广东省东莞市 超域网吧(南城金丰商业街B3座)">
+                            113.105.135.188
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122846
+                        </td>
+                        <td title="13908399098">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17801&#39;,&#39;17801&#39;,850,600);">
+                                13908399098</a>
+                        </td>
+                         <td>
+                            13908399099
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-24 19:32:41
+                        </td>
+                        <td title="重庆市 移动">
+                            183.228.28.255
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122845
+                        </td>    
+                        <td title="mmagg001">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17800&#39;,&#39;17800&#39;,850,600);">
+                                mmagg001</a>
+                        </td>
+                        <td>
+                            hvhjgjm
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            18
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-21 10:17:30
+                        </td>
+                        <td title="浙江省丽水市 电信">
+                            115.209.235.163
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122844
+                        </td>
+                        <td title="aabuqu">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17799&#39;,&#39;17799&#39;,850,600);">
+                                aabuqu</a>
+                        </td>
+                         <td>
+                            5we4r5w
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-15 12:49:39
+                        </td>
+                        <td title="陕西省渭南市 电信">
+                            117.32.97.38
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122843
+                        </td>    
+                        <td title="test004">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17798&#39;,&#39;17798&#39;,850,600);">
+                                test004</a>
+                        </td>
+                        <td>
+                            test004
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            1,000,000
+                        </td>
+                        <td>
+                            1,001,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            600
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-5 15:26:42
+                        </td>
+                        <td title="重庆市 联通">
+                            27.11.85.168
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122842
+                        </td>
+                        <td title="test003">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17797&#39;,&#39;17797&#39;,850,600);">
+                                test003</a>
+                        </td>
+                         <td>
+                            test003
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            1,000,000
+                        </td>
+                        <td>
+                            1,001,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            600
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-5 15:26:14
+                        </td>
+                        <td title="重庆市 联通">
+                            27.11.85.168
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122841
+                        </td>    
+                        <td title="test002">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17796&#39;,&#39;17796&#39;,850,600);">
+                                test002</a>
+                        </td>
+                        <td>
+                            test002
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            1,000,000
+                        </td>
+                        <td>
+                            1,001,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            600
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-5-5 15:23:23
+                        </td>
+                        <td title="重庆市 联通">
+                            27.11.85.168
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            6783
+                        </td>
+                        <td title="my0xsec">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17795&#39;,&#39;17795&#39;,850,600);">
+                                my0xsec</a>
+                        </td>
+                         <td>
+                            my0xsec
+                        </td>
+                        <td>
+                            49,443,800
+                        </td>
+                        <td>
+                            245,898,990
+                        </td>
+                        <td>
+                            295,342,790
+                        </td>
+                        <td>
+                            281
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            62462
+                        </td>
+                        <td>
+                            600000
+                        </td>
+                        <td>
+                            12
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            12
+                        </td>
+                        <td>
+                            3745849
+                        </td>
+                        <td>
+                            1945
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-23 22:30:35
+                        </td>
+                        <td title="四川省资阳市 电信">
+                            182.135.162.123
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122839
+                        </td>    
+                        <td title="bajin8888">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17794&#39;,&#39;17794&#39;,850,600);">
+                                bajin8888</a>
+                        </td>
+                        <td>
+                            八斤8888
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            199
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-21 13:13:53
+                        </td>
+                        <td title="重庆市 电信">
+                            106.87.8.82
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122838
+                        </td>
+                        <td title="tzyyuanlaiai">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17793&#39;,&#39;17793&#39;,850,600);">
+                                tzyyuanlaiai</a>
+                        </td>
+                         <td>
+                            dfakld
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-18 14:00:27
+                        </td>
+                        <td title="福建省厦门市 电信">
+                            120.39.117.46
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            79829
+                        </td>    
+                        <td title="zaq123xxx">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17792&#39;,&#39;17792&#39;,850,600);">
+                                zaq123xxx</a>
+                        </td>
+                        <td>
+                            蔡思涛
+                        </td>
+                        <td>
+                            5,853,100
+                        </td>
+                        <td>
+                            6,437,450,941
+                        </td>
+                        <td>
+                            6,443,304,041
+                        </td>
+                        <td>
+                            16
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            1370
+                        </td>
+                        <td>
+                            50000
+                        </td>
+                        <td>
+                            15
+                        </td>    
+                        <td>
+                            8
+                        </td>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            79052
+                        </td>
+                        <td>
+                            309
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-14 22:02:26
+                        </td>
+                        <td title="海南省儋州市 电信">
+                            59.49.236.112
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122836
+                        </td>
+                        <td title="lleekk">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17791&#39;,&#39;17791&#39;,850,600);">
+                                lleekk</a>
+                        </td>
+                         <td>
+                            lleekklll
+                        </td>
+                        <td>
+                            6,968,768
+                        </td>
+                        <td>
+                            4,282,967,294
+                        </td>
+                        <td>
+                            4,289,936,062
+                        </td>
+                        <td>
+                            141
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            4219
+                        </td>
+                        <td>
+                            420000
+                        </td>
+                        <td>
+                            77
+                        </td>
+                        <td>
+                            32
+                        </td>
+                        <td>
+                            45
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            11
+                        </td>
+                        <td>
+                            239758
+                        </td>
+                        <td>
+                            1817
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-15 5:47:51
+                        </td>
+                        <td title="海南省儋州市 电信">
+                            59.49.236.111
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122835
+                        </td>    
+                        <td title="局局654321">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17790&#39;,&#39;17790&#39;,850,600);">
+                                局局654321</a>
+                        </td>
+                        <td>
+                            聚聚聚聚聚聚
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-11 22:28:33
+                        </td>
+                        <td title="重庆市南岸区 电信">
+                            125.85.90.174
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122834
+                        </td>
+                        <td title="AA156229">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17789&#39;,&#39;17789&#39;,850,600);">
+                                AA156229</a>
+                        </td>
+                         <td>
+                            ZCDCKSXXX
+                        </td>
+                        <td>
+                            1,500
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,500
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            31
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-3-27 2:43:37
+                        </td>
+                        <td title="湖南省永州市 移动">
+                            111.8.239.113
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="list" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122833
+                        </td>    
+                        <td title="tianyukuai">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17788&#39;,&#39;17788&#39;,850,600);">
+                                tianyukuai</a>
+                        </td>
+                        <td>
+                            yukuai
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>    
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-3-17 14:33:18
+                        </td>
+                        <td title="四川省成都市 电信">
+                            182.150.22.45
+                        </td>
+                    </tr>
+                
+                    <tr align="center" class="listBg" onmouseover="currentcolor=this.style.backgroundColor;this.style.backgroundColor=&#39;#caebfc&#39;;this.style.cursor=&#39;default&#39;;" onmouseout="this.style.backgroundColor=currentcolor" style="cursor: default;">
+                        <td>
+                            122832
+                        </td>
+                        <td title="okokwu">
+                            <a class="l" href="javascript:void(0);" onclick="openWindowOwn(&#39;AccountsGoldInfo.aspx?param=17787&#39;,&#39;17787&#39;,850,600);">
+                                okokwu</a>
+                        </td>
+                         <td>
+                            忘记你的笑
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1,000
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                             
+                        </td>
+                        <td>
+                            2016-4-16 16:26:48
+                        </td>
+                        <td title="福建省厦门市 电信">
+                            121.204.196.60
+                        </td>
+                    </tr>
+                
+            
+        </tbody></table>
+    </div>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+            <td class="listTitleBg" style="">
+            </td>
+            <td align="right" class="page">
+                <div id="anpPage">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td valign="bottom" nowrap="true" style="width:40%;">总记录：8092　页码：1/405　每页：20</td><td valign="bottom" nowrap="true" style="width:60%;"><a disabled="disabled" style="margin-right:5px;">首页</a><a disabled="disabled" style="margin-right:5px;">上页</a><span style="margin-right:5px;font-weight:Bold;color:red;">1</span><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;2&#39;)" style="margin-right:5px;">2</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;3&#39;)" style="margin-right:5px;">3</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;4&#39;)" style="margin-right:5px;">4</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;5&#39;)" style="margin-right:5px;">5</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;6&#39;)" style="margin-right:5px;">...</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;2&#39;)" style="margin-right:5px;">下页</a><a href="javascript:__doPostBack(&#39;anpPage&#39;,&#39;405&#39;)" style="margin-right:5px;">末页</a>&nbsp;&nbsp;<input type="text" value="1" name="anpPage_input" id="anpPage_input" onkeydown="ANP_keydown(event,&#39;anpPage_btn&#39;);" style="width:30px;"><input type="submit" value="go" name="anpPage" id="anpPage_btn" onclick="if(ANP_checkInput(&#39;anpPage_input&#39;,405)){__doPostBack(&#39;anpPage&#39;,&#39;&#39;)} else{return false}"></td>
+	</tr>
+</tbody></table>
+</div>
+
+
+            </td>
+        </tr>
+    </tbody></table>
+    
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+</form>
+
+
+</body></html>
